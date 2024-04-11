@@ -1,0 +1,21 @@
+{%extends "home.html"%}
+{%load i18n%}
+{%block title%}{%trans "comments"%}{%endblock%}
+{%block content%}
+<h1>{%trans "comments"%}</h1>
+{%if user.is_authenticated%}
+<h2>{%trans "create new comment"%}</h2>
+<form method="post">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit">{%trans "publish"%}</button>
+</form>
+{%endif%}
+{%for comment in comments%}
+<h2>{{comment.title}}</h2>
+<p>{%trans "by"%} {{comment.user.first_name}} {{comment.user.last_name}}</p>
+<p>
+    <pre>{{comment.content}}</pre>
+</p>
+{%endfor%}
+{%endblock%}

@@ -16,3 +16,6 @@ class ChangePassword(forms.Form):
     currentPassword=forms.CharField(label=_("current password"),widget=forms.PasswordInput())
     newPassword=forms.CharField(min_length=8,label=_("new password"),widget=forms.PasswordInput())
     confNewPassword=forms.CharField(min_length=8,label=_("confirm new password"),widget=forms.PasswordInput())
+class Comment(forms.Form):
+    title=forms.CharField(label=_("title"))
+    description=forms.CharField(label=_("content"),widget=forms.Textarea)

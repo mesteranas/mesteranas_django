@@ -1,5 +1,5 @@
 import requests
-from django.utils.translation import gettext_lazy as _,activate
+from django.utils.translation import gettext_lazy as _,activate,get_language
 from django.shortcuts import render,redirect,get_object_or_404
 from . import forms,models
 from django.contrib import auth
@@ -8,7 +8,9 @@ from django.contrib.auth.models import User
 
 
 # Create your views here.
+
 def home_(r):
+    activate(r.session.get('django_language', None))
     return render(r,"home.html")
 def Contect(r):
     return render(r,"contect.html")
@@ -18,6 +20,7 @@ def changeLanguage(r):
     if r.method=="POST":
         language=r.POST["language"]
         activate(language)
+        r.session['django_language'] = language
         return redirect("homePage")
     return render(r,"changeLanguage.html")
 def newaccound(r):
@@ -88,9 +91,36 @@ def changePassword(r):
     return render(r,"change_password.html",{"form":frm})
 def viewblog(r,pk):
     post=get_object_or_404(models.post,pk=pk)
+    title=""
+    body=""
+    language=get_language()
+    if language=="ar":
+        title=post.arabicTitle
+        body=post.arabicBody
+    else:
+        title=post.englishTitle
+        body=post.englishBody
+    post.title=title
+    post.body=body
+
     return render(r,"post.html",{"post":post})
 def blog(r):
-    posts=models.post.objects.all().order_by("-date")
+    Posts=models.post.objects.all().order_by("-date")
+    posts=[]
+    title=""
+    body=""
+    language=get_language()
+    for post in Posts:
+        if language=="ar":
+            title=post.arabicTitle
+            body=post.arabicBody
+        else:
+            title=post.englishTitle
+            body=post.englishBody
+        post.title=title
+        post.body=body
+        posts.append(post)
+
     return render(r,"blog.html",{"posts":posts})
 def myProjects(re):
     page=1
@@ -104,3 +134,17 @@ def myProjects(re):
             page+=1
             projects.extend(r.json())
     return render(re,"myProjects.html",{"projects":projects})
+def comments(r,pk):
+    post=get_object_or_404(models.post,pk=pk)
+    comments = models.Comments.objects.filter(post=post).order_by("-date")
+    if r.method=="POST":
+        form=forms.Comment(r.POST)
+        if form.is_valid():
+            comment=models.Comments()
+            comment.post=post
+            comment.title=form.cleaned_data["title"]
+            comment.content=form.cleaned_data["description"]
+            comment.user=User.objects.get(username=r.user)
+            comment.save()
+    form=forms.Comment()
+    return render(r,"comments.html",{"comments":comments,"form":form})

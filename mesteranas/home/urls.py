@@ -13,5 +13,6 @@ urlpatterns=[
  path("accounts/changePassword",views.changePassword,name="changePassword"),
     path("blog",views.blog,name="blog"),
     path("post/<int:pk>",views.viewblog,name="ViewPost"),
-    path("myProjects",views.myProjects,name="myProjects")
+    path("myProjects",views.myProjects,name="myProjects"),
+    path("post/<int:pk>/comments",views.comments,name="comments")
 ]
