@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+{%load i18n%}
+{%block title%}{%trans "confirm delete account"%}{%endblock%}
+{% block content%}
+<h2>{%trans "confirm delete account"%}</h2>
+<form method="post">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit">{%trans "delete"%}</button>
+</form>
+
+{%endblock%}

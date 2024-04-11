@@ -1,0 +1,9 @@
+{% extends "home.html"%}
+{%load i18n%}
+{%block title%}{%trans " account settings"%}{%endblock%}
+{%block content%}
+<h2>{%trans "settings"%}</h2>
+<a href="{%url "changePassword"%}">{%trans "change password"%}</a>
+<br>
+<a href="{%url "deleteaccount"%}">{%trans " delete account"%}</a>
+{%endblock%}   

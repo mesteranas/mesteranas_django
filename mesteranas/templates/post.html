@@ -1,0 +1,20 @@
+{% extends "home.html"%}
+{%load i18n%}
+{%block title%}{{post.title}}{%endblock%}
+{%block content%}
+<h2>{{post.title}}</h2>
+<p>{%trans "by"%} {{post.user.first_name}} {{post.user.last_name}}</p>
+<p>{%trans "publish on:"%}" {{post.date}}</p>
+<p>{%trans "category:"%}" {{post.category}}</p>
+<p><pre>{{post.body|safe}}</pre></p>
+<details>
+    <summary>share</summary>
+    <a href="https://t.me/share/url?url={{post.title}} :https://domain.com{% url "ViewPost" post.pk%}">telegram</a>
+    <br>
+    <a href="https://wa.me/?text={{post.title}} :https://domain.com{% url "ViewPost" post.pk%}">whatsapp</a>
+    <br>
+    <a href="https://www.facebook.com/sharer/sharer.php?{{post.title}} :https://domain.com{% url "ViewPost" post.pk%}">facebook</a>
+    <br>
+    <a href="https://twitter.com/intent/tweet?text={{post.title}} :https://domain.com{% url "ViewPost" post.pk%}">x</a>
+</details>
+{%endblock%}

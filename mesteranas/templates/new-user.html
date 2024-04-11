@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+{%load i18n%}
+{%block title%}{%trans "new account"%}{%endblock%}
+{% block content%}
+<h2>{%trans "new accoun"%}</h2>
+<form method="post">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit">{%trans "create"%}</button>
+</form>
+
+{%endblock%}

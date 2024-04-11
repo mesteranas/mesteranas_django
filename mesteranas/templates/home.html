@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    {% load static%}
+{% load i18n %}
+    <title>{% block title %}
+        {%trans "home"%}
+    {% endblock %} - mesteranas </title>
+
+    <link rel="stylesheet" href="{% static "css/stile.css" %}">
+    </head>
+<body>
+    <header id="header">
+        <h1>mesteranas </h1>
+        <p><a href="#content">{%trans "skip to content"%}</a></p>
+        <p><a href="#footer">{%trans "skip to footer"%}</a></p>
+    </header>
+    <nav>
+        <h2>{%trans "navigation bar"%}</h2>
+        <ul id="navBar">
+        <li><a href="{% url 'homePage'%}">{%trans "home"%}</a></li>
+        <li><a href="{% url "contect"%}">{%trans "contect"%}</a></li>
+        <li><a href="{%url "about"%}">{%trans "about"%}</a></li>
+        <li><a href="{%url "blog"%}">{%trans "blog"%}</a></li>
+        <li><a href="{%url "myProjects"%}">{%trans "my projects"%}</a></li>
+    {%if user.is_authenticated%}
+        <li><a href="{%url "logout"%}">{%trans "log out"%}</a></li>
+        <li><a href="{%url "accountSettings"%}">{%trans "account settings"%}</a></li>
+        {%else%}
+        <li><a href="{%url "login"%}">{%trans "login"%}</a></li>
+        <li><a href="{%url "newaccound"%}">{%trans "create new account"%}</a></li>
+        {%endif%}
+
+    </ul>
+    </nav>
+    {%block content%}
+    <section id="content">
+    <h1>{%trans "welcom"%}</h1>
+    </section>
+    {%endblock%}
+    <footer id="footer">
+        <a href="{%url "changeLanguage"%}">{% trans "change language"%}</a>
+        <br>
+        <h2>{%trans "footer"%}</h2>
+        <p><a href="#header">{%trans "skip to top"%}</a></p>
+        <p><a href="https://www.paypal.me/AMohammed231">{%trans "donate"%}</a></p>
+    <p>&copy; 2024 mesteranas sites</p>
+    </footer>
+    <script src="{%static "javascript/script.js"%}"></script>
+</body>
+</html>
