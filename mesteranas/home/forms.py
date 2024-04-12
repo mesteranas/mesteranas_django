@@ -30,3 +30,6 @@ def getCategory():
     return categories
 class SelectCategory(forms.Form):
     category=forms.ChoiceField(choices=getCategory(),label=_("select category"))
+class RequestAProjectForm(forms.Form):
+    describ=forms.CharField(label=_("describ your project full description"),widget=forms.Textarea)
+    contect=forms.CharField(label=_("type your whatsapp phone number with your country code or your telegram username"))

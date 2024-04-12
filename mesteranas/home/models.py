@@ -20,3 +20,9 @@ class Comments(models.Model):
     date=models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.title + self.post.englishTitle + self.user.first_name + self.user.last_name
+class requestProject(models.Model):
+    describ=models.TextField()
+    contect=models.CharField(max_length=1000)
+    user=models.ForeignKey(to=User,on_delete=models.CASCADE)
+    def __str__(self):
+        return self.user.username

@@ -25,6 +25,7 @@
     {%if user.is_authenticated%}
         <li><a href="{%url "logout"%}">{%trans "log out"%}</a></li>
         <li><a href="{%url "accountSettings"%}">{%trans "account settings"%}</a></li>
+        <li><a href="{%url "requestProject"%}">{%trans "request a project"%}</a></li>
         {%else%}
         <li><a href="{%url "login"%}">{%trans "login"%}</a></li>
         <li><a href="{%url "newaccound"%}">{%trans "create new account"%}</a></li>

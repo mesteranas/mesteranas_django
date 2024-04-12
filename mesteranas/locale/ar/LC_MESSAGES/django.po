@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 21:54+0200\n"
-"PO-Revision-Date: 2024-04-09 21:55+0200\n"
+"POT-Creation-Date: 2024-04-12 14:41+0200\n"
+"PO-Revision-Date: 2024-04-12 14:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -19,23 +19,171 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: .\templates\about.html:4 .\templates\about.html:7 .\templates\home.html:22
+#: .\home\forms.py:5
+msgid "frist name"
+msgstr "الإسم الأول"
+
+#: .\home\forms.py:6
+msgid "last name"
+msgstr "الأسم الأخير"
+
+#: .\home\forms.py:7
+msgid "email"
+msgstr "البريد الإلكتروني"
+
+#: .\home\forms.py:8 .\home\forms.py:12
+msgid "user name"
+msgstr "إسم المستخدم"
+
+#: .\home\forms.py:9 .\home\forms.py:13
+msgid "password"
+msgstr "كلمة المرور"
+
+#: .\home\forms.py:10
+msgid "confirm password"
+msgstr "تأكيد كلمة المرور"
+
+#: .\home\forms.py:15
+msgid "confirm password to delete account"
+msgstr "تأكيد كلمة المرور لحذف الحساب"
+
+#: .\home\forms.py:17
+msgid "current password"
+msgstr "كلمة المرور الحالية"
+
+#: .\home\forms.py:18
+msgid "new password"
+msgstr "كلمة المرور الجديدة"
+
+#: .\home\forms.py:19
+msgid "confirm new password"
+msgstr "تأكيد كلمة المرور الجديدة"
+
+#: .\home\forms.py:21
+msgid "title"
+msgstr "العنوان"
+
+#: .\home\forms.py:22
+#, fuzzy
+#| msgid "contect"
+msgid "content"
+msgstr "طواصل"
+
+#: .\home\forms.py:32
+msgid "select category"
+msgstr "إختر فئة"
+
+#: .\home\forms.py:34
+msgid "describ your project full description"
+msgstr "أوصف مشروعك وصفا كاملا"
+
+#: .\home\forms.py:35
+msgid ""
+"type your whatsapp phone number with your country code or your telegram "
+"username"
+msgstr ""
+"اكتب رقم هاتف WhatsApp الخاص بك مع رمز البلد الخاص بك أو اسم مستخدم Telegram "
+"الخاص بك"
+
+#: .\templates\about.html:4 .\templates\home.html:22
 msgid "about"
 msgstr "حول"
 
+#: .\templates\about.html:7
+msgid "About Me"
+msgstr "حول"
+
 #: .\templates\about.html:8
-msgid "description:"
-msgstr "الوصف:"
+msgid ""
+"Hello! I'm a passionate developer with a strong foundation in Python, HTML, "
+"CSS, and JavaScript."
+msgstr "مرحبًا! أنا مطور متحمس ولدي أساس قوي في Python وHTML وCSS وJavaScript."
 
 #: .\templates\about.html:9
-msgid "no"
+msgid ""
+"My expertise lies in creating dynamic user interfaces with frameworks like "
+"Django, PyQt6, and wxPython, and developing functional Telegram bots."
 msgstr ""
+"تكمن خبرتي في إنشاء واجهات مستخدم ديناميكية باستخدام أطر عمل مثل Django "
+"وPyQt6 وwxPython، وتطوير روبوتات Telegram الوظيفية."
 
 #: .\templates\about.html:10
-msgid "version :"
-msgstr "الإصدار:"
+msgid ""
+"Additionally, I have experience in developing addons for the NVDA screen "
+"reader, which aids visually impaired users like myself in navigating digital "
+"content more effectively."
+msgstr ""
+"بالإضافة إلى ذلك، لدي خبرة في تطوير الإضافات لقارئ الشاشة NVDA، والذي يساعد "
+"المستخدمين ضعاف البصر مثلي في التنقل عبر المحتوى الرقمي بشكل أكثر فعالية."
 
-#: .\templates\changeLanguage.html:3 .\templates\home.html:31
+#: .\templates\about.html:11
+msgid ""
+"I have a solid grasp of various Python modules that enhance the "
+"functionality and efficiency of my projects, enabling me to build robust and "
+"scalable applications."
+msgstr ""
+"لدي فهم قوي لمختلف وحدات بايثون التي تعزز وظائف وكفاءة مشاريعي، مما يتيح لي "
+"بناء تطبيقات قوية وقابلة للتطوير."
+
+#: .\templates\about.html:12
+msgid "I am bilingual, proficient in both Arabic and English."
+msgstr "أنا ثنائي اللغة، وأتقن اللغتين العربية والإنجليزية."
+
+#: .\templates\about.html:13
+msgid ""
+"My journey in programming started at the young age of 11, and it has been a "
+"rewarding adventure ever since."
+msgstr ""
+"بدأت رحلتي في البرمجة عندما كنت في الحادية عشرة من عمري، وكانت مغامرة مجزية "
+"منذ ذلك الحين."
+
+#: .\templates\about.html:14
+msgid ""
+"I have a particular affinity for open-source projects, as I believe in the "
+"power of collaborative development and sharing knowledge to enhance and "
+"innovate."
+msgstr ""
+"لدي ميل خاص للمشاريع مفتوحة المصدر، لأنني أؤمن بقوة التطوير التعاوني ومشاركة "
+"المعرفة لتعزيز الابتكار."
+
+#: .\templates\about.html:15
+msgid ""
+"Outside of programming, I am an avid sports fan. I support Al Ahli in Egypt, "
+"Real Madrid in Spain, and Manchester City in England."
+msgstr ""
+"وبعيدًا عن البرمجة، فأنا من عشاق الرياضة. أنا أشجع الأهلي في مصر، وريال مدريد "
+"في إسبانيا، ومانشستر سيتي في إنجلترا."
+
+#: .\templates\about.html:16
+msgid "My passion for sports is just as intense as my love for coding!"
+msgstr "شغفي بالرياضة لا يقل عن حبي للبرمجة!"
+
+#: .\templates\about.html:17
+msgid ""
+"I am always eager to take on new challenges and continuously learn to "
+"contribute more effectively to the communities I am part of."
+msgstr ""
+"أنا دائمًا حريص على مواجهة التحديات الجديدة والتعلم المستمر للمساهمة بشكل "
+"أكثر فعالية في المجتمعات التي أنتمي إليها."
+
+#: .\templates\blog.html:3 .\templates\blog.html:5 .\templates\home.html:23
+msgid "blog"
+msgstr "المدونة"
+
+#: .\templates\blog.html:6
+msgid "category"
+msgstr "الفئة"
+
+#: .\templates\blog.html:10 .\templates\changeLanguage.html:17
+#: .\templates\change_password.html:9
+msgid "change"
+msgstr "تغيير"
+
+#: .\templates\blog.html:14
+msgid "published date "
+msgstr "تاريخ النشر"
+
+#: .\templates\changeLanguage.html:3 .\templates\home.html:42
 msgid "change language"
 msgstr "تغيير اللغة"
 
@@ -43,9 +191,31 @@ msgstr "تغيير اللغة"
 msgid "language"
 msgstr "اللغة"
 
-#: .\templates\changeLanguage.html:17
-msgid "change"
-msgstr "تغيير"
+#: .\templates\change_password.html:3 .\templates\change_password.html:5
+#: .\templates\profile.html:6
+msgid "change password"
+msgstr "تغيير كلمة المرور"
+
+#: .\templates\comments.html:3 .\templates\comments.html:5
+#: .\templates\post.html:10
+msgid "comments"
+msgstr "التعليقات"
+
+#: .\templates\comments.html:7
+msgid "create new comment"
+msgstr "إنشاء تعليق جديد"
+
+#: .\templates\comments.html:11
+msgid "publish"
+msgstr "نشر"
+
+#: .\templates\comments.html:14
+msgid "login to add comment"
+msgstr "سجل الدخول لإضافة تعليق"
+
+#: .\templates\comments.html:18 .\templates\post.html:6
+msgid "by"
+msgstr "بواسطة"
 
 #: .\templates\contect.html:4 .\templates\contect.html:7
 #: .\templates\home.html:21
@@ -59,6 +229,14 @@ msgstr "قناة التليجرام"
 #: .\templates\contect.html:18
 msgid "visite project on Github"
 msgstr "زيارة المشروع على github"
+
+#: .\templates\deleteAccount.html:3 .\templates\deleteAccount.html:5
+msgid "confirm delete account"
+msgstr "تأكيد حذف الحساب"
+
+#: .\templates\deleteAccount.html:9
+msgid "delete"
+msgstr "حذف"
 
 #: .\templates\home.html:6 .\templates\home.html:20
 msgid "home"
@@ -76,18 +254,91 @@ msgstr "التخطي إلى آخر الصفحة"
 msgid "navigation bar"
 msgstr "شريط التنقل"
 
+#: .\templates\home.html:24 .\templates\myProjects.html:3
+#: .\templates\myProjects.html:5
+msgid "my projects"
+msgstr "مشاريعي"
+
+#: .\templates\home.html:26
+msgid "log out"
+msgstr "تسجيل الخروج"
+
 #: .\templates\home.html:27
+msgid "account settings"
+msgstr "إعدادات الحساب"
+
+#: .\templates\home.html:28 .\templates\project\done.html:3
+#: .\templates\project\done.html:5 .\templates\project\form.html:3
+#: .\templates\project\form.html:5
+msgid "request a project"
+msgstr "طلب مشروع"
+
+#: .\templates\home.html:30 .\templates\login.html:3 .\templates\login.html:5
+#: .\templates\login.html:9
+msgid "login"
+msgstr "تسجيل الدخول"
+
+#: .\templates\home.html:31
+msgid "create new account"
+msgstr "إنشاؤ حساب جديد"
+
+#: .\templates\home.html:38
 msgid "welcom"
 msgstr "مرحبا"
 
-#: .\templates\home.html:33
+#: .\templates\home.html:44
 msgid "footer"
 msgstr "آخر الصفحة"
 
-#: .\templates\home.html:34
+#: .\templates\home.html:45
 msgid "skip to top"
 msgstr "التخطي إلى الأعلا"
 
-#: .\templates\home.html:35
+#: .\templates\home.html:46
 msgid "donate"
 msgstr "تبرع"
+
+#: .\templates\myProjects.html:8
+#, fuzzy
+#| msgid "description:"
+msgid "description"
+msgstr "الوصف:"
+
+#: .\templates\new-user.html:3
+msgid "new account"
+msgstr "حساب جديد"
+
+#: .\templates\new-user.html:5
+msgid "new accoun"
+msgstr "حساب جديد"
+
+#: .\templates\new-user.html:9
+msgid "create"
+msgstr "إنشاء"
+
+#: .\templates\post.html:7
+msgid "publish on:"
+msgstr "نشرف في:"
+
+#: .\templates\post.html:8
+msgid "category:"
+msgstr "الفئة"
+
+#: .\templates\profile.html:3
+msgid " account settings"
+msgstr "إعدادات الحساب"
+
+#: .\templates\profile.html:5
+msgid "settings"
+msgstr "الإعدادات"
+
+#: .\templates\profile.html:8
+msgid " delete account"
+msgstr "حذف الحساب"
+
+#: .\templates\project\done.html:6
+msgid "project is requested \\nplease wait untill anas contect you thankyou "
+msgstr "تم طلب المشروع \\\\nيرجى الانتظار حتى يتصل بك أنس، شكرًا لك"
+
+#~ msgid "version :"
+#~ msgstr "الإصدار:"

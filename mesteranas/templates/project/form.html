@@ -1,0 +1,11 @@
+{%extends "home.html"%}
+{%load i18n%}
+{%block title%}{%trans "request a project"%}{%endblock%}
+{%block content%}
+<h2>{%trans "request a project"%}</h2>
+<form method="post">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit">request</button>
+</form>
+{%endblock%}

@@ -155,3 +155,17 @@ def comments(r,pk):
             comment.save()
     form=forms.Comment()
     return render(r,"comments.html",{"comments":comments,"form":form})
+@login_required
+def requestAProject(r):
+    user=get_object_or_404(User,username=r.user)
+    if r.method=="POST":
+        form=forms.RequestAProjectForm(r.POST)
+        if form.is_valid():
+            model=models.requestProject()
+            model.user=user
+            model.describ=form.cleaned_data["describ"]
+            model.contect=form.cleaned_data["contect"]
+            model.save()
+        return render(r,"project/done.html")
+    form=forms.RequestAProjectForm()
+    return render(r,"project/form.html",{"form":form})
