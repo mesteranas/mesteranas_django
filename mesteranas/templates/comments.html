@@ -10,6 +10,8 @@
     {{form}}
     <button type="submit">{%trans "publish"%}</button>
 </form>
+{%else%}
+<p>{%trans "login to add comment"%}</p>
 {%endif%}
 {%for comment in comments%}
 <h2>{{comment.title}}</h2>

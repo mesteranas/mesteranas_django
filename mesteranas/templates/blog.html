@@ -3,6 +3,12 @@
 {%block title%}{%trans "blog"%}{%endblock%}
 {% block content%}
 <h2>{%trans "blog"%}</h2>
+<h3>{%trans "category"%}</h3>
+<form method="post">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit">{%trans "change"%}</button>
+</form>
 {%for post in posts%}
 <h3><a href="{% url "ViewPost" post.pk%}">{{post.title}}</a></h3>
 <p>{%trans "published date "%} {{post.date}}</p>

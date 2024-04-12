@@ -20,7 +20,7 @@
         <li><a href="{% url 'homePage'%}">{%trans "home"%}</a></li>
         <li><a href="{% url "contect"%}">{%trans "contect"%}</a></li>
         <li><a href="{%url "about"%}">{%trans "about"%}</a></li>
-        <li><a href="{%url "blog"%}">{%trans "blog"%}</a></li>
+        <li><a href="{%url "blog" "all"%}">{%trans "blog"%}</a></li>
         <li><a href="{%url "myProjects"%}">{%trans "my projects"%}</a></li>
     {%if user.is_authenticated%}
         <li><a href="{%url "logout"%}">{%trans "log out"%}</a></li>

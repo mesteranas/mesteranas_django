@@ -11,8 +11,8 @@ urlpatterns=[
  path("accounts/settings",views.settings,name="accountSettings")   ,
  path("accounts/delete",views.deletacc,name="deleteaccount"),
  path("accounts/changePassword",views.changePassword,name="changePassword"),
-    path("blog",views.blog,name="blog"),
-    path("post/<int:pk>",views.viewblog,name="ViewPost"),
+    path("blog/category/<str:category>",views.blog,name="blog"),
+    path("blog/post/<int:pk>",views.viewblog,name="ViewPost"),
     path("myProjects",views.myProjects,name="myProjects"),
-    path("post/<int:pk>/comments",views.comments,name="comments")
+    path("vlog/post/<int:pk>/comments",views.comments,name="comments")
 ]

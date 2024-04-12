@@ -104,8 +104,15 @@ def viewblog(r,pk):
     post.body=body
 
     return render(r,"post.html",{"post":post})
-def blog(r):
-    Posts=models.post.objects.all().order_by("-date")
+def blog(r,category="all"):
+    if category=="all":
+        Posts=models.post.objects.all().order_by("-date")
+    else:
+        Posts=models.post.objects.filter(category=category).order_by("-date")
+    if r.method=="POST":
+        form=forms.SelectCategory(r.POST)
+        if form.is_valid():
+            return redirect("blog",category=form.cleaned_data["category"])
     posts=[]
     title=""
     body=""
@@ -120,8 +127,8 @@ def blog(r):
         post.title=title
         post.body=body
         posts.append(post)
-
-    return render(r,"blog.html",{"posts":posts})
+    form=forms.SelectCategory({"category":category})
+    return render(r,"blog.html",{"posts":posts,"form":form})
 def myProjects(re):
     page=1
     projects=[]

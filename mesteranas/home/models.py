@@ -19,4 +19,4 @@ class Comments(models.Model):
     content=models.TextField()
     date=models.DateTimeField(auto_now=True)
     def __str__(self):
-        return self.title
+        return self.title + self.post.englishTitle + self.user.first_name + self.user.last_name

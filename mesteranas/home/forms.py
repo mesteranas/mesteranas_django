@@ -1,4 +1,5 @@
 from django import forms
+from . import models
 from django.utils.translation import gettext as _
 class new_accound (forms.Form):
     frist_name=forms.CharField(label=_("frist name"))
@@ -19,3 +20,13 @@ class ChangePassword(forms.Form):
 class Comment(forms.Form):
     title=forms.CharField(label=_("title"))
     description=forms.CharField(label=_("content"),widget=forms.Textarea)
+def getCategory():
+    categories=[("all","all")]
+    for post in models.post.objects.all().order_by("-date"):
+        List=(post.category,post.category)
+        if List in categories:
+            continue
+        categories.append(List)
+    return categories
+class SelectCategory(forms.Form):
+    category=forms.ChoiceField(choices=getCategory(),label=_("select category"))
