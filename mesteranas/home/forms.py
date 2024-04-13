@@ -2,7 +2,7 @@ from django import forms
 from . import models
 from django.utils.translation import gettext as _
 class new_accound (forms.Form):
-    frist_name=forms.CharField(label=_("frist name"))
+    frist_name=forms.CharField(label=_("first name"))
     last_name=forms.CharField(label=_("last name"))
     email=forms.CharField(label=_("email"),widget=forms.EmailInput())
     user_name=forms.CharField(label=_("user name"))
@@ -31,5 +31,5 @@ def getCategory():
 class SelectCategory(forms.Form):
     category=forms.ChoiceField(choices=getCategory(),label=_("select category"))
 class RequestAProjectForm(forms.Form):
-    describ=forms.CharField(label=_("describ your project full description"),widget=forms.Textarea)
+    describ=forms.CharField(label=_("describe your project full description"),widget=forms.Textarea)
     contect=forms.CharField(label=_("type your whatsapp phone number with your country code or your telegram username"))
